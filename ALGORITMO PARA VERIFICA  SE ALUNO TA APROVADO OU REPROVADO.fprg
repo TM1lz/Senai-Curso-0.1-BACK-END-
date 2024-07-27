@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 02:46:28 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDctMjc7IjAyOjM4OjQ3ICI7MzQ2NQ=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDctMjc7IjAyOjQ2OjI4ICI7MTszNTcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Escolha a nota do Aluno&quot;" newline="True"/>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <input variable="num1"/>
+            <if expression="num1&gt;=50">
+                <then>
+                    <output expression="&quot;Aluno Estar Aprovado !!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="num1 &gt;= 45">
+                        <then>
+                            <output expression="&quot; o Aluno VAI PARA CONSELHO&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Reprovado&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
