@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 04:19:09 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDgtMDM7IjAyOjU2OjE4ICI7MzQ1OA=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDgtMDM7IjA0OjE5OjA5ICI7MjszNTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, total" type="Real" array="False" size=""/>
+            <declare name="ope, repetir" type="String" array="False" size=""/>
+            <do expression="repetir=&quot;&quot;">
+                <output expression="&quot;Escolha um Numero&quot;" newline="True"/>
+                <input variable="num1"/>
+                <output expression="&quot;Escolha seu Segundo numero&quot;" newline="True"/>
+                <input variable="num2"/>
+                <output expression="&quot;Digite a Opera&#231;&#227;o&quot;" newline="True"/>
+                <input variable="ope"/>
+                <assign variable="total" expression="operacao(ope,num1,num2)"/>
+                <output expression="total" newline="True"/>
+                <input variable="repetir"/>
+            </do>
+        </body>
+    </function>
+    <function name="divi" type="Real" variable="total">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="num1/num2"/>
+        </body>
+    </function>
+    <function name="mult" type="Real" variable="total">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="num1*num2"/>
+        </body>
+    </function>
+    <function name="operacao" type="Real" variable="total">
+        <parameters>
+            <parameter name="ope" type="String" array="False"/>
+            <parameter name="n1" type="Real" array="False"/>
+            <parameter name="n2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <comment text="ope= Opera&#231;&#227;o"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <while expression="ope!=&quot;+&quot; and &#13;&#10;ope!=&quot;-&quot; and &#13;&#10;ope!=&quot;*&quot; and &#13;&#10;ope!=&quot;/&quot;">
+                <output expression="&quot;Escreva uma Opera&#231;oa correta&quot;" newline="True"/>
+                <input variable="ope"/>
+            </while>
+            <if expression="ope=&quot;+&quot;">
+                <then>
+                    <assign variable="total" expression="n1+n2"/>
+                </then>
+                <else>
+                    <if expression="ope=&quot;-&quot;">
+                        <then>
+                            <assign variable="total" expression="n1-n2"/>
+                        </then>
+                        <else>
+                            <if expression="ope=&quot;*&quot;">
+                                <then>
+                                    <assign variable="total" expression="n1*n2"/>
+                                </then>
+                                <else>
+                                    <assign variable="total" expression="n1/n2"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Somar" type="Real" variable="total">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="num1 + num2"/>
+        </body>
+    </function>
+    <function name="subtracao" type="Real" variable="total">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="num1-num2"/>
+        </body>
+    </function>
+</flowgorithm>
