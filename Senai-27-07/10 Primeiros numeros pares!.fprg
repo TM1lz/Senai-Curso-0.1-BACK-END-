@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 04:42:50 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDctMjc7IjEyOjI5OjAwICI7MzQ1NQ=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDctMjc7IjA0OjQyOjUwICI7NTszNTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, i, a, num3" type="Real" array="False" size=""/>
+            <comment text="VAR que vai pegar o numero , para verifica&#231;ao se &#233; impar ou par "/>
+            <output expression="&quot;Escreva seu numero !!&quot;" newline="True"/>
+            <input variable="num1"/>
+            <assign variable="a" expression="num1 + 1"/>
+            <assign variable="num2" expression="0"/>
+            <assign variable="num3" expression="1"/>
+            <comment text="Ler num1 recebe o numero dado pelo usuario "/>
+            <comment text="&quot;Inicio do la&#231;o de repeti&#231;&#227;o&quot;"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <comment text="&quot;Verifica que &#233; par ou impar&quot;"/>
+                <if expression="num1 = 0">
+                    <then>
+                        <output expression="&quot;0 &#233; um numero invalido!!&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="num1%2=0">
+                            <then>
+                                <output expression="&quot;Seu Numero &#233; PAR &quot;&amp;num1" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <comment text="&quot;Acresenta +1 ,para continuar o codigo&quot;"/>
+                <assign variable="num1" expression="num1 + 1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
