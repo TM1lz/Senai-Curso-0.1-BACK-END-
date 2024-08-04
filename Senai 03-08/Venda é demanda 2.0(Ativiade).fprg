@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-04 08:47:49 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDgtMDM7IjA0OjMyOjIyICI7MzQ0OQ=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDgtMDM7IjA1OjMyOjI4ICI7MTszNTY0"/>
+        <attribute name="edited" value="YWxpY2k7REVTS1RPUC00VjRUQU0xOzIwMjQtMDgtMDQ7IjA4OjQ3OjQ5ICI7MjsyODc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantProdutos, i, cont, totaLucro, totalP, totalG" type="Real" array="False" size=""/>
+            <assign variable="cont" expression="0"/>
+            <assign variable="totalP" expression="0"/>
+            <assign variable="totalG" expression="0"/>
+            <assign variable="totaLucro" expression="0"/>
+            <comment text="Vari&#225;veis declaradas e valores atribu&#237;dos."/>
+            <output expression="&quot;Em n&#250;meros, diga quantos produtos voc&#234; quer adicionar.&quot;" newline="True"/>
+            <input variable="quantProdutos"/>
+            <declare name="NomeProduto" type="String" array="True" size="quantProdutos"/>
+            <declare name="CustoProduto, VendaProduto" type="Integer" array="True" size="quantProdutos"/>
+            <comment text="Vetores declarados e a quantidade de itens que ser&#227;o apresentados foi obtida."/>
+            <for variable="i" start="1" end="quantProdutos" direction="inc" step="1">
+                <comment text="Nesse loop, iremos pegar valores para os vetores, como nome, custo e valor de venda."/>
+                <output expression="&quot;Digite o nome do produto.&quot;&amp;i&amp;&quot;:&quot;" newline="True"/>
+                <input variable="NomeProduto[cont]"/>
+                <output expression="&quot;Digite o custo dele:?&quot;" newline="True"/>
+                <input variable="CustoProduto[cont]"/>
+                <output expression="&quot;Por quanto voc&#234; quer vender?&quot;" newline="True"/>
+                <input variable="VendaProduto[cont]"/>
+                <comment text="&#13;&#10;Aqui, iremos calcular a m&#233;dia de lucro dos produtos e armazenar na vari&#225;vel."/>
+                <assign variable="totalP" expression="totalP+VendaProduto[cont]"/>
+                <assign variable="totalG" expression="totalG+CustoProduto[cont]"/>
+                <comment text="A vari&#225;vel &quot;cont&quot; &#233; respons&#225;vel por contar as posi&#231;&#245;es dos vetores. Poderia ser usada a vari&#225;vel &quot;i&quot; para poupar c&#243;digo, mas acho que fica mais preciso usar uma vari&#225;vel dedicada."/>
+                <assign variable="cont" expression="cont + 1"/>
+            </for>
+            <assign variable="totalucro" expression="totalP-totalG"/>
+            <comment text="Fase final do cod"/>
+            <output expression="&quot;Somando todos os produtos e subtraindo sua margem de lucro dos valores totais, o resultado &#233;: &quot; &amp; totaLucro &amp; &quot;. O n&#250;mero de produtos selecionados foi: &quot; &amp; quantProdutos &amp; &quot; produtos.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
