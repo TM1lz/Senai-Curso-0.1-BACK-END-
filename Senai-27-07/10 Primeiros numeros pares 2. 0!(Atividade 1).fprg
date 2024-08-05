@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-04 09:21:51 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDctMjc7IjEyOjI5OjAwICI7MzQ1NQ=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDctMjc7IjA0OjQyOjUwICI7NTszNTY4"/>
+        <attribute name="edited" value="YWxpY2k7REVTS1RPUC00VjRUQU0xOzIwMjQtMDgtMDQ7IjA5OjIxOjUxICI7MTsyODYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, i" type="Real" array="False" size=""/>
+            <declare name="in" type="String" array="False" size=""/>
+            <comment text="A vari&#225;vel 'num' vai guardar os n&#250;meros pares. A vari&#225;vel 'i' ser&#225; usada para o la&#231;o de repeti&#231;&#227;o, controlando quantas itera&#231;&#245;es ocorrer&#227;o no la&#231;o. A vari&#225;vel 'in' serve apenas para iniciar o la&#231;o."/>
+            <assign variable="num" expression="1"/>
+            <output expression="&quot;Pressione qualquer tecla para ver os 10 primeiros n&#250;meros pares usando o 'while':&quot;" newline="True"/>
+            <input variable="in"/>
+            <output expression="&quot;Os 10 n&#250;meros pares utilizando um la&#231;o 'while' na sequ&#234;ncia s&#227;o:&quot;" newline="True"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <comment text="O 'if' ir&#225; verificar os n&#250;meros pares na sequ&#234;ncia."/>
+                <if expression="num%2=0">
+                    <then>
+                        <output expression="num" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <comment text="Acrescenta +1 &#224; num para continuar sendo verificado novamente pelo if. Caso o n&#250;mero seja par, ser&#225; impresso na tela; caso seja &#237;mpar, n&#227;o ser&#225; impresso"/>
+                <assign variable="num" expression="num + 1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
