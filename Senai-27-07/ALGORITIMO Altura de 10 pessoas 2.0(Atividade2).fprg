@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-04 09:54:01 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U041MTQtMTI0Mjk3OTsyMDI0LTA3LTI3OyIwNDo1MDo0MyAiOzMxMjc="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTQtMTI0Mjk3OTsyMDI0LTA3LTI3OyIwNTozMTowMSAiOzE7MzIyOQ=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1IN0NJUUk4OzIwMjQtMDgtMDM7IjAyOjEyOjU4ICI7MTszNTYy"/>
+        <attribute name="edited" value="YWxpY2k7REVTS1RPUC00VjRUQU0xOzIwMjQtMDgtMDQ7IjA5OjU0OjAxICI7MjsyODY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altura, menorAltura, maiorAltura, soma, media" type="Real" array="False" size=""/>
+            <comment text="Variaveis declaradas para o projeto!"/>
+            <assign variable="maiorAltura" expression="0"/>
+            <assign variable="menorAltura" expression="3"/>
+            <comment text="A vari&#225;vel `menorAltura` est&#225; inicialmente definida como 3, mas logo ser&#225; substitu&#237;da pela menor altura encontrada no la&#231;o."/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;Informe &#224; altura &quot; &amp;i&amp; &quot; :&quot;" newline="True"/>
+                <input variable="altura"/>
+                <comment text="O loop verifica se h&#225; pessoas com tamanhos negativos ou alturas nunca mencionadas nos registros (por exemplo, 3m)"/>
+                <while expression="altura&lt;=0 or altura&gt;=3">
+                    <output expression="&quot;Informe uma altura v&#225;lida! Sabemos que n&#227;o h&#225; uma pessoa com altura de &quot; &amp; altura &amp; &quot;.Informe: &quot;" newline="True"/>
+                    <input variable="altura"/>
+                </while>
+                <assign variable="soma" expression="altura+altura"/>
+                <comment text="A vari&#225;vel `soma` armazena o total das alturas passadas pelo la&#231;o."/>
+                <if expression="altura&gt;maiorAltura">
+                    <then>
+                        <comment text="Verificar&#225; se a `altura` &#233; menor que a `alturaMaior`. Se n&#227;o, a altura ser&#225; considerada maior."/>
+                        <assign variable="maiorAltura" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="altura&lt;menorAltura">
+                    <then>
+                        <comment text="Verificar&#225; se a `altura` &#233; menor que a `alturaMenor`. Se n&#227;o, a altura ser&#225; considerada menor."/>
+                        <comment text="A vari&#225;vel `menorAltura` est&#225; inicialmente definida como 3, mas logo ser&#225; substitu&#237;da pela menor altura encontrada no la&#231;o."/>
+                        <assign variable="menorAltura" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Media das Alturas&#13;&#10;"/>
+            <assign variable="media" expression="soma/10"/>
+            <output expression="&quot;A maior altura: &quot;&amp;maiorAltura&amp;&quot; A menor altura: &quot;&amp;menorAltura&amp;&quot; Media das alturas: &quot;&amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
