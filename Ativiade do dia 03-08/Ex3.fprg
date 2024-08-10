@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exe3"/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-10 10:16:40 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1KVk8zQzdGOzIwMjQtMDgtMTA7IjA5OjUzOjI2ICI7MzQ2NA=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1KVk8zQzdGOzIwMjQtMDgtMTA7IjEwOjE2OjQwICI7MzszNTYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, totalsoma" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quantos n&#250;meros voc&#234; deseja adicionar?&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="Var n Var de controle "/>
+            <assign variable="totalsoma" expression="FucSoma(n)"/>
+            <output expression="&quot;O maior numero da sua lista &#233; :&quot;&amp;totalsoma" newline="True"/>
+        </body>
+    </function>
+    <function name="FucSoma" type="Integer" variable="total">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total, i, ler, max" type="Integer" array="False" size=""/>
+            <assign variable="max" expression="0"/>
+            <comment text="Loop identifica qual n&#250;mero &#233; maior."/>
+            <comment text="A vari&#225;vel &quot;n&quot; controla quantas itera&#231;&#245;es o loop deve fazer"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="&quot;Digite o valor do numero &quot;&amp;i" newline="True"/>
+                <input variable="ler"/>
+                <comment text="Ler recebe numero "/>
+                <comment text="Verifique se o valor lido &#233; maior que o m&#225;ximo; caso seja, o valor ser&#225; adicionado ao m&#225;ximo."/>
+                <if expression="ler&gt;max">
+                    <then>
+                        <assign variable="max" expression="ler"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Total recebe o valor de &quot;max&quot;, permitindo assim sair da fun&#231;&#227;o e retornar ao c&#243;digo principal."/>
+            <assign variable="total" expression="max"/>
+        </body>
+    </function>
+</flowgorithm>
